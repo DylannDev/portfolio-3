@@ -1,21 +1,30 @@
 /* eslint-disable @next/next/no-img-element */
 import { cn } from "@/lib/utils";
-import { PiStar, PiStarFill } from "react-icons/pi";
+import { capitalizeFirstLetter } from "@/utils/helpers";
+import { PiStarFill } from "react-icons/pi";
+import React, { useState } from "react";
 
 export const ReviewCard = ({
-  img,
   name,
   title,
-  body,
+  message,
   stars,
 }: {
-  img: string;
   name: string;
   title: string;
-  body: string;
+  message: string;
   stars: number;
 }) => {
   const MAX_STARS = 5;
+  const [imageError, setImageError] = useState(false);
+
+  // Extraire les initiales
+  const getInitials = (fullName: string) => {
+    return fullName
+      .split(" ")
+      .map((word) => word[0]?.toUpperCase())
+      .join("");
+  };
 
   return (
     <figure
@@ -25,18 +34,23 @@ export const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img
-          className="rounded-full border-2 border-purple-500"
-          width="48"
-          height="48"
-          alt=""
-          src={img}
-        />
+        {imageError ? (
+          <div className="rounded-full bg-black-100 border border-purple flex items-center justify-center w-12 h-12">
+            <span className="text-white font-bold">{getInitials(name)}</span>
+          </div>
+        ) : (
+          <img
+            className="rounded-full border border-purple w-12 h-12"
+            alt="client photo"
+            src={`/${name}.jpg`}
+            onError={() => setImageError(true)}
+          />
+        )}
         <div className="flex flex-col gap-1">
-          <figcaption className="text-base font-bold text-white">
+          <figcaption className="text-base font-bold text-white capitalize">
             {name}
           </figcaption>
-          <p className="text-xs font-light text-purple">{title}</p>
+          <p className="text-xs font-light text-purple capitalize">{title}</p>
         </div>
       </div>
       <div className="flex items-center">
@@ -47,7 +61,9 @@ export const ReviewCard = ({
           />
         ))}
       </div>
-      <blockquote className="text-white">{body}</blockquote>
+      <blockquote className="text-white">
+        {capitalizeFirstLetter(message)}
+      </blockquote>
     </figure>
   );
 };

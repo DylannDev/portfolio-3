@@ -111,7 +111,7 @@ const Testimonials = () => {
                       onChange={handleChange}
                       placeholder={input.placeholder}
                       rows={input.rows}
-                      className="w-full p-3 rounded-lg bg-white/10 border border-white/10 placeholder-gray-400"
+                      className="w-full p-3 rounded-lg bg-white/10 border border-white/10 placeholder-gray-400 outline-none"
                       required
                     />
                   ) : (
@@ -122,7 +122,7 @@ const Testimonials = () => {
                       value={formData[input.name as keyof typeof formData]}
                       onChange={handleChange}
                       placeholder={input.placeholder}
-                      className="w-full p-3 rounded-lg bg-white/10 border border-white/10 placeholder-gray-400"
+                      className="w-full p-3 rounded-lg bg-white/10 border border-white/10 placeholder-gray-400 outline-none"
                       required
                     />
                   )

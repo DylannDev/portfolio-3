@@ -84,11 +84,10 @@ const Testimonials = () => {
   }, [submitted, router]);
 
   return (
-    <div className="grid place-content-center grid-cols-1 sm:grid-cols-none h-[100dvh] pt-40 mb-40 relative z-10 w-full">
+    <div className="grid place-content-center grid-cols-1 gap-10 sm:grid-cols-none h-full mt-40 mb-40 relative z-10 w-full">
       <BackButton />
-
       {!submitted ? (
-        <>
+        <div>
           <h1 className="text-3xl md:text-5xl font-bold text-center mb-10">
             Donnez votre <span className="text-purple">avis</span>
           </h1>
@@ -159,7 +158,7 @@ const Testimonials = () => {
               </div>
             </form>
           </Button>
-        </>
+        </div>
       ) : (
         <div className="flex flex-col items-center relative">
           <div className="text-center text-2xl text-green-400 font-semibold mb-4">

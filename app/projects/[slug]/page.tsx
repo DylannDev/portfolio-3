@@ -46,9 +46,9 @@ const ProjectDetail = () => {
 
         <DotBackgroundDemo />
 
-        <div className="relative lg:max-w-4xl mx-auto">
+        <div className="flex flex-col gap-10 mt-32 relative lg:max-w-4xl mx-auto">
           <BackButton />
-          <div className="lg:pt-40 pt-36">
+          <div className="">
             <ProjectDescription selectedProject={selectedProject} />
           </div>
         </div>

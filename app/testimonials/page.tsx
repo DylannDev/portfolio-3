@@ -10,16 +10,17 @@ import { FaLocationArrow } from "react-icons/fa";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import { useRouter } from "next/navigation";
+const INITIAL_FORM_DATA = {
+  name: "",
+  title: "",
+  email: "",
+  message: "",
+  stars: 0,
+};
 
 const Testimonials = () => {
   const router = useRouter();
-  const [formData, setFormData] = useState({
-    name: "",
-    title: "",
-    body: "",
-    email: "",
-    star: 0,
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -33,32 +34,43 @@ const Testimonials = () => {
     }));
   };
 
-  const handleStarChange = (star: number) => {
+  const handleStarChange = (stars: number) => {
     setFormData((prev) => ({
       ...prev,
-      star,
+      stars,
     }));
     if (error) setError(""); // Réinitialise l'erreur si une étoile est sélectionnée
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Vérifie si une étoile est sélectionnée
-    if (formData.star === 0) {
+    if (formData.stars === 0) {
       setError("Veuillez sélectionner au moins 1 étoile.");
       return;
     }
 
-    // Simule la soumission réussie
-    setSubmitted(true);
-    setFormData({
-      name: "",
-      title: "",
-      body: "",
-      email: "",
-      star: 0,
-    });
+    try {
+      const response = await fetch("/api/submitReview", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData(INITIAL_FORM_DATA);
+      } else {
+        const errorData = await response.json();
+        console.error("Submission error:", errorData.error);
+        setError("Erreur lors de l'envoi de l'avis.");
+      }
+    } catch (err) {
+      console.error("Request failed:", err);
+      setError("Erreur lors de la soumission de l'avis.");
+    }
   };
 
   // Redirection après 5 secondes une fois le formulaire soumis
@@ -72,7 +84,7 @@ const Testimonials = () => {
   }, [submitted, router]);
 
   return (
-    <div className="grid place-content-center grid-cols-1 sm:grid-cols-none h-[calc(100dvh-440px)] pt-40 mb-40 relative z-10 w-full">
+    <div className="grid place-content-center grid-cols-1 sm:grid-cols-none h-[100dvh] pt-40 mb-40 relative z-10 w-full">
       <BackButton />
 
       {!submitted ? (
@@ -126,7 +138,7 @@ const Testimonials = () => {
                         key={star}
                         onClick={() => handleStarChange(star)}
                         className={`cursor-pointer text-lg ${
-                          formData.star >= star
+                          formData.stars >= star
                             ? "text-[#ff862f]"
                             : "text-slate-600"
                         }`}

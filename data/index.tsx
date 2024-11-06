@@ -58,7 +58,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "les nouvelles technologies et l'entrepreunariat",
+    title: "les nouvelles technologies et l'entrepreneuriat",
     description: "Développeur passionné par ",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",

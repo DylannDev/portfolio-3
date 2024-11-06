@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "👨‍💻 Dylann Xavero - Développeur Front-End | Portfolio",
+  title: "Dylann Xavero - Développeur Front-End | Portfolio",
   description:
     "Développeur front-end spécialisé dans la création de sites web réactifs et modernes. J'utilise React, Next.js et TypeScript pour donner vie à vos applications.",
 };

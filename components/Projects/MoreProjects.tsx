@@ -5,7 +5,7 @@ import { projects } from "@/data";
 export const MoreProjects = ({ slug }: { slug: string | string[] }) => {
   return (
     <div className="flex flex-col pt-20 mb-40 border-t border-white/10">
-      <h1 className="text-2xl sm:text-4xl text-white font-bold mb-12">
+      <h1 className="text-[32px] sm:text-4xl text-center sm:text-left text-white font-bold mb-12">
         Une sélection de mes{" "}
         <span className="text-purple">meilleurs projets</span>
       </h1>

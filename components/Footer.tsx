@@ -9,10 +9,7 @@ import SocialMediaLinks from "./SocialMediaLinks";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer
-      className="w-full pb-10 mb-[100px] md:mb-5 relative -z-1"
-      id="contact"
-    >
+    <footer className="w-full pb-10 mb-12 md:mb-5 relative -z-1" id="contact">
       <div className="w-full absolute left-0 -bottom-72 min-h-96 ">
         <img
           src="/footer-grid.svg"
@@ -23,9 +20,8 @@ const Footer = () => {
       <div className="relative z-10">
         <div className="flex flex-col items-center">
           <h1 className="heading lg:max-w-[45vw]">
-            Prêt à propulser vos{" "}
-            <span className="text-purple">projets digitaux</span> vers de
-            nouveaux sommets ? 🚀
+            Envie de faire{" "}
+            <span className="text-purple">décoller vos projets ?</span> 🚀
           </h1>
           <p className="text-white-200 md:mt-10 my-5 text-center ">
             Discutons dès maintenant de la façon dont je peux vous aider à

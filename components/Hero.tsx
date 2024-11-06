@@ -30,7 +30,7 @@ const Hero = () => {
             Créateur d'Expériences Web Sur-Mesure
           </p>
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[32px] md:text-5xl lg:text-6xl"
             words="Transformez vos idées en expériences web immersives"
           />
           <p className="text-center mb-8 text-sm lg:text-lg">

@@ -31,7 +31,7 @@ const ProjectDetail = () => {
 
   return (
     <>
-      <div className="pb-20 pt-36 fade-in">
+      <div className="pb-20 pt-8 sm:pt-36 fade-in">
         <div className="">
           <Spotlight
             className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"

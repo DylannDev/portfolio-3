@@ -29,7 +29,7 @@ const Process = () => {
                 <h1 className="text-center text-xl md:text-[22px] font-bold">
                   {card.title}
                 </h1>
-                <p className="text-start text-white mt-3 font-semibold">
+                <p className="text-start text-white text-base font-medium mt-6">
                   {card.desc}
                 </p>
               </div>

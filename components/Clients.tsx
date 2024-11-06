@@ -28,10 +28,10 @@ const Clients = () => {
 
   return (
     <div className="py-20" id="testimonials">
-      <h1 className="heading">
+      <h1 className="heading mb-10 sm:mb-0">
         Quelques <span className="text-purple">témoignages</span> clients
       </h1>
-      <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden">
+      <div className="relative hidden sm:flex h-[400px] w-full flex-col items-center justify-center overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {reviews.map((review) => (
             <ReviewCard
@@ -45,6 +45,21 @@ const Clients = () => {
         </Marquee>
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-black-100 to-black-100/0"></div>
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-black-100 to-black-100/0"></div>
+      </div>
+      <div className="relative flex sm:hidden h-[600px] w-full flex-col items-center justify-center overflow-hidden">
+        <Marquee pauseOnHover vertical className="[--duration:20s]">
+          {reviews.map((review) => (
+            <ReviewCard
+              key={review.id}
+              name={review.name}
+              title={review.title}
+              message={review.message}
+              stars={review.stars}
+            />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-black-100 to-black-100/0"></div>
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-1/5 bg-gradient-to-b from-black-100 to-black-100/0"></div>
       </div>
     </div>
   );

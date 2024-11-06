@@ -18,3 +18,8 @@ export const findProjectBySlug = (
 ): Project | undefined => {
   return array.find((arrayItem) => arrayItem.slug === slug);
 };
+
+// Fonction pour mettre la première lettre en majuscule
+export const capitalizeFirstLetter = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};

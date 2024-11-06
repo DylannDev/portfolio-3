@@ -22,7 +22,10 @@ const Clients = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await fetch("/api/getReviews");
+        const response = await fetch("/api/getReviews", {
+          method: "GET",
+          cache: "no-store", // Désactive le cache côté client
+        });
         if (response.ok) {
           const data = await response.json();
           setReviews(data);

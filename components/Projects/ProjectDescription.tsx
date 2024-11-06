@@ -14,7 +14,7 @@ export const ProjectDescription = ({
 }: ProjectDescriptionProps) => {
   return (
     <>
-      <div className="flex flex-col gap-6 pb-8 sm:pb-16 mt-16 lg:mt-0">
+      <div className="flex flex-col gap-6 pb-8 sm:pb-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
           {selectedProject.title}
         </h2>

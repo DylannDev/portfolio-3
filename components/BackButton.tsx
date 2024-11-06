@@ -8,7 +8,7 @@ export default function BackButton(): JSX.Element {
 
   return (
     <button
-      className="flex items-center gap-1 hover:border-b-[1px] hover:border-purple pb-[2px] absolute z-[9] cursor-pointer lg:mt-20 mt-40 sm:mt-16  text-purple border-b-primary"
+      className="flex items-center gap-1 border-b-[1px] border-b-transparent hover:border-purple pb-[2px] cursor-pointer text-purple w-fit"
       onClick={() => router.push("/")}
     >
       <PiArrowLeft />

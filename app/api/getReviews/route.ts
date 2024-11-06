@@ -11,7 +11,15 @@ export async function GET() {
       ...doc.data(),
     }));
 
-    return NextResponse.json(reviews, { status: 200 });
+    const response = NextResponse.json(reviews, { status: 200 });
+
+    // Gestion du cache
+    response.headers.set(
+      "Cache-Control",
+      "s-maxage=60, stale-while-revalidate=30"
+    );
+
+    return response;
   } catch (error) {
     console.error("Error fetching reviews:", error);
     return NextResponse.json(

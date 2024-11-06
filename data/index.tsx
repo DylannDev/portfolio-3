@@ -224,35 +224,40 @@ export const projects = [
 
 export const reviews = [
   {
-    body: "Travailler avec Dylann a été une expérience transformative. Son sens du détail et son engagement envers l'excellence ont permis de créer un site exceptionnel qui reflète parfaitement notre marque.",
+    message:
+      "Travailler avec Dylann a été une expérience transformative. Son sens du détail et son engagement envers l'excellence ont permis de créer un site exceptionnel qui reflète parfaitement notre marque.",
     name: "Sophie Martin",
     title: "Fondatrice de Lumina Créations",
     img: "/portrait-dylann-ai.jpg",
     stars: 5,
   },
   {
-    body: "Dylann a su allier créativité et rigueur technique pour nous offrir une solution sur mesure. Sa capacité à comprendre nos besoins spécifiques a été un vrai plus pour ce projet.",
+    message:
+      "Dylann a su allier créativité et rigueur technique pour nous offrir une solution sur mesure. Sa capacité à comprendre nos besoins spécifiques a été un vrai plus pour ce projet.",
     name: "Lucas Dumont",
     title: "Responsable Marketing chez NovaCorp",
     img: "/portrait-dylann-ai.jpg",
     stars: 3,
   },
   {
-    body: "Je recommande vivement Dylann. Non seulement il est réactif, mais il propose aussi des solutions innovantes qui ont permis de rendre notre plateforme plus performante et intuitive.",
+    message:
+      "Je recommande vivement Dylann. Non seulement il est réactif, mais il propose aussi des solutions innovantes qui ont permis de rendre notre plateforme plus performante et intuitive.",
     name: "Isabelle Tremblay",
     title: "CEO de Tremblay Conseil",
     img: "/portrait-dylann-ai.jpg",
     stars: 4,
   },
   {
-    body: "Le professionnalisme de Dylann est remarquable. Il a su livrer dans les délais et a dépassé nos attentes avec un site esthétique et efficace. Un partenaire de choix pour tout projet web.",
+    message:
+      "Le professionnalisme de Dylann est remarquable. Il a su livrer dans les délais et a dépassé nos attentes avec un site esthétique et efficace. Un partenaire de choix pour tout projet web.",
     name: "Alexandre Leroy",
     title: "Directeur Technique chez SphereLab",
     img: "/portrait-dylann-ai.jpg",
     stars: 5,
   },
   {
-    body: "Dylann est non seulement compétent, mais aussi passionné par son travail. Son approche axée sur les résultats a été déterminante pour le succès de notre refonte de site.",
+    message:
+      "Dylann est non seulement compétent, mais aussi passionné par son travail. Son approche axée sur les résultats a été déterminante pour le succès de notre refonte de site.",
     name: "Camille Moreau",
     title: "Directrice Artistique de Studio Velvet",
     img: "/portrait-dylann-ai.jpg",
@@ -278,7 +283,7 @@ export const reviewsInputsConfig = [
   },
   {
     type: "textarea",
-    name: "body",
+    name: "message",
     placeholder: "Rédigez votre avis...",
     rows: 6,
   },

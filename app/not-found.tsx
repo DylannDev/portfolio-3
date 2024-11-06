@@ -4,7 +4,7 @@ import { PiSmileyXEyes } from "react-icons/pi";
 
 export default function NotFound() {
   return (
-    <div className="grid place-content-center h-[calc(100dvh-440px)] pt-20">
+    <div className="grid place-content-center h-[100dvh] pt-20">
       <BackButton />
       <div className="flex flex-col items-center gap-6">
         <PiSmileyXEyes className="text-red-500 text-5xl" />

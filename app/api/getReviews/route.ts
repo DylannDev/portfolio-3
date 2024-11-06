@@ -14,10 +14,7 @@ export async function GET() {
     const response = NextResponse.json(reviews, { status: 200 });
 
     // Gestion du cache
-    response.headers.set(
-      "Cache-Control",
-      "s-maxage=60, stale-while-revalidate=30"
-    );
+    response.headers.set("Cache-Control", "no-store");
 
     return response;
   } catch (error) {

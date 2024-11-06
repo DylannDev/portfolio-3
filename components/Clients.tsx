@@ -4,9 +4,7 @@
 import React, { useEffect, useState } from "react";
 import Marquee from "./ui/marquee";
 import { ReviewCard } from "./ui/ReviewCard";
-
-// const firstRow = reviews.slice(0, reviews.length / 2);
-// const secondRow = reviews.slice(reviews.length / 2);
+import { fetchReviews } from "@/firebase/fetchReviews";
 
 type Review = {
   id: string;
@@ -20,25 +18,14 @@ const Clients = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
 
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch("/api/getReviews", {
-          method: "GET",
-          cache: "no-store", // Désactive le cache côté client
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setReviews(data);
-        } else {
-          console.error("Erreur lors de la récupération des avis");
-        }
-      } catch (error) {
-        console.error("Erreur de requête :", error);
-      }
+    const getReviews = async () => {
+      const reviewsData = await fetchReviews();
+      setReviews(reviewsData);
     };
 
-    fetchReviews();
+    getReviews();
   }, []);
+
   return (
     <div className="py-20" id="testimonials">
       <h1 className="heading">

@@ -28,10 +28,10 @@ const Clients = () => {
 
   return (
     <div className="py-20" id="testimonials">
-      <h1 className="heading mb-10 sm:mb-0">
+      <h1 className="heading mb-10">
         Quelques <span className="text-purple">témoignages</span> clients
       </h1>
-      <div className="relative hidden sm:flex h-[400px] w-full flex-col items-center justify-center overflow-hidden">
+      <div className="relative hidden sm:flex w-full flex-col items-center justify-center overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {reviews.map((review) => (
             <ReviewCard

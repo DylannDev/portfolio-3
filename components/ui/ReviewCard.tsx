@@ -29,7 +29,7 @@ export const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative w-full sm:w-[400px] cursor-pointer overflow-hidden rounded-2xl border py-8 px-6 transition duration-300",
+        "relative w-full sm:w-[400px] h-fit cursor-pointer overflow-hidden rounded-2xl border py-8 px-6 transition duration-300",
         "bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl flex flex-col gap-4"
       )}
     >

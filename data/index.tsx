@@ -122,7 +122,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Amazonia Academy - Landing Page",
+    title: "Amazonia Academy - Plateforme de Formation",
     slug: "amazonia-academy-landing-page",
     des: "Développement d’une landing page de vente pour une formation en trading, visant à maximiser les conversions et à refléter l’expertise de l’académie.",
     img: "/amazonia.jpg",
@@ -138,10 +138,11 @@ export const projects = [
     linkGithub: "amazonia-academy",
     isClientProject: true,
     paragraphs: [
-      "Actuellement je travaille sur le développement d'une landing page de vente pour une formation en trading, conçue pour maximiser les conversions et attirer de nouveaux clients. L'objectif est de créer un site moderne, engageant et optimisé, intégrant des solutions de paiement et de réservation en ligne pour une expérience utilisateur fluide.",
-      "Le projet suit une approche complète du cycle de développement, de la conception initiale à la mise en production. Je prends en charge le design en utilisant Figma, tout en m’occupant du copywriting pour maximiser l’impact marketing. Chaque section de la page est structurée pour optimiser l'engagement en utilisant des techniques de marketing digital.",
-      "La page comprendra plusieurs fonctionnalités avancées, telles que l'intégration de Stripe pour les paiements sécurisés, un système de réservation en ligne via l'API Calendly, ainsi qu'un blog intégré pour améliorer le référencement et attirer du trafic organique. Pour la gestion du blog, j'intègre MongoDB comme base de données et Next Auth pour sécuriser l'authentification de l'administrateur, facilitant ainsi la gestion des publications d'articles.",
-      "Le projet utilise Next.js et Tailwind CSS pour une performance et une flexibilité optimales. Les solutions externes telles que Stripe et Calendly sont intégrées pour les paiements et la planification, tandis que MongoDB et Next Auth assurent la gestion des données et l’authentification sécurisée.",
+      "Actuellement, je travaille sur le développement d'une landing page de vente pour une formation en trading, conçue pour maximiser les conversions et attirer de nouveaux clients. En parallèle, le client m'a demandé de développer une plateforme complète où ses clients pourront accéder à leurs vidéos de formation, suivre leur progression, et bénéficier d'un espace personnel sécurisé.",
+      "Le projet suit une approche complète du cycle de développement, allant de la conception initiale à la mise en production. Je prends en charge le design en utilisant Figma, tout en m'occupant du copywriting pour maximiser l'impact marketing. Chaque section de la landing page est pensée pour optimiser l'engagement à l'aide de techniques de marketing digital.",
+      "La landing page comprendra des fonctionnalités avancées telles que l'intégration de Stripe pour les paiements sécurisés et un système de réservation en ligne via l'API Calendly. Quant à la plateforme, elle inclura un système d'authentification pour sécuriser l'accès aux espaces personnels des utilisateurs et une gestion des vidéos permettant aux clients de suivre leur progression de manière intuitive.",
+      "Pour les vidéos de formation, je prévois d'utiliser un service d'hébergement cloud tel qu'AWS, garantissant des performances optimales et une scalabilité adaptée aux besoins du projet. Cela permettra de centraliser et sécuriser les contenus tout en offrant une expérience utilisateur fluide et fiable.",
+      "Le projet utilise Next.js et Tailwind CSS pour garantir performance et flexibilité, ainsi que des solutions externes telles que Stripe et Calendly pour les paiements et la planification. Ces technologies permettent de construire un écosystème robuste et intuitif, répondant aux besoins des utilisateurs et du client.",
     ],
 
     // paragraphs : [
@@ -197,17 +198,16 @@ export const projects = [
     title: "Oshun - Ecommerce",
     slug: "oshun-ecommerce",
     des: "Développement d'un site e-commerce avec Wix Headless pour une gestion flexible des produits et commandes.",
-    img: "/p4.svg",
+    img: "/oshun.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/wix.svg"],
-    linkDemo: "https://oshun-jewelry.vercel.app/",
+    linkDemo: "https://oshun.vercel.app/",
     linkGithub: "oshun-jewelry",
     isClientProject: true,
     paragraphs: [
-      "J'ai réalisé le développement d'un site e-commerce pour une cliente spécialisée dans la vente de bijoux artisanaux, afin de lui permettre de promouvoir et de vendre ses créations en ligne de manière professionnelle.",
-      "Le projet inclut la mise en place de plusieurs fonctionnalités : ajout de produits au panier, système de gestion des commandes, et page dédiée où les clients peuvent retrouver l'historique de leurs commandes.",
-      "Le projet est actuellement en pause à la demande de la cliente, car elle travaille sur la création du contenu pour sa marque. Néanmoins, les fonctionnalités principales du site ont déjà été implémentées.",
-      "Je me suis occupé de la partie design du site, y compris la création du logo pour la marque, afin d'assurer une cohérence visuelle et une identité forte pour la boutique.",
-      "Le site utilise Next.js, TypeScript, Tailwind CSS pour le frontend, et Wix pour la gestion du backend, incluant la gestion des produits, des stocks et des commandes.",
+      "J'ai initialement développé un site e-commerce pour une cliente spécialisée dans la vente de bijoux artisanaux, afin de l'aider à promouvoir et vendre ses créations en ligne. Cependant, suite à la mise en pause du projet à la demande de la cliente, je l'ai transformé en projet personnel, en le réorientant vers la vente de vêtements et d'accessoires.",
+      "Le projet inclut plusieurs fonctionnalités essentielles : ajout de produits au panier, gestion des commandes, et une page dédiée permettant aux utilisateurs de consulter l'historique de leurs commandes.",
+      "Je me suis également chargé de la conception et de l'optimisation de l'interface utilisateur, en veillant à offrir une navigation intuitive et une expérience utilisateur fluide, adaptée aux besoins des clients potentiels du site.",
+      "Le site a été développé en utilisant Next.js, TypeScript, et Tailwind CSS pour le frontend. Wix est utilisé pour la gestion du backend, couvrant les fonctionnalités liées aux produits, aux stocks, et aux commandes.",
     ],
     features: [
       "Catalogue de produits avec filtrage (taille, prix)",

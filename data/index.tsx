@@ -79,7 +79,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Envie de lancer un projet ensemble ?",
+    title: "Découvrez mon parcours et mes compétences !",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",

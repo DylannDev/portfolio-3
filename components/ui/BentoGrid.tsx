@@ -7,7 +7,7 @@ import { useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
-import { IoCopyOutline } from "react-icons/io5";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 export const BentoGrid = ({
   className,
@@ -51,12 +51,10 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const [copied, setCopied] = useState(false);
+  const [downloaded, setDownloaded] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText("d.xavero@hotmail.com");
-
-    setCopied(true);
+  const handleDownload = () => {
+    setDownloaded(true);
   };
   return (
     <div
@@ -150,8 +148,8 @@ export const BentoGridItem = ({
               <div className={`absolute -bottom-5 right-0`}>
                 <Lottie
                   options={{
-                    loop: copied,
-                    autoplay: copied,
+                    loop: downloaded,
+                    autoplay: downloaded,
                     animationData,
                     rendererSettings: {
                       preserveAspectRatio: "xMidYMid slice",
@@ -159,14 +157,15 @@ export const BentoGridItem = ({
                   }}
                 />
               </div>
-
-              <MagicButton
-                title={copied ? "Email copié 🎉" : "Copier mon email"}
-                icon={<IoCopyOutline />}
-                position="left"
-                otherClasses="!bg-[#161a31]"
-                handleClick={handleCopy}
-              />
+              <a href="/cv-dylann-xavero.pdf" target="_blank">
+                <MagicButton
+                  title={downloaded ? "CV téléchargé 🎉" : "Consulter mon CV"}
+                  icon={<IoDocumentTextOutline />}
+                  position="left"
+                  otherClasses="!bg-[#161a31]"
+                  handleClick={handleDownload}
+                />
+              </a>
             </div>
           )}
         </div>
